@@ -1,0 +1,90 @@
+{
+  "base_url": {
+    "description": "Komari 站点地址",
+    "type": "string",
+    "default": "",
+    "hint": "例如 https://zt.xinjianya.top"
+  },
+  "api_key": {
+    "description": "Komari API 密钥（可选，公开站点可留空）",
+    "type": "string",
+    "default": "",
+    "is_password": true
+  },
+  "timeout_seconds": {
+    "description": "接口请求超时时间（秒）",
+    "type": "int",
+    "default": 15
+  },
+  "mjpeg_lang": {
+    "description": "MJPEG 状态图语言",
+    "type": "string",
+    "default": "zh",
+    "options": ["zh", "en"]
+  },
+  "mjpeg_tz_offset": {
+    "description": "MJPEG 状态图时区偏移（小时）",
+    "type": "int",
+    "default": 8
+  },
+  "target_umo": {
+    "description": "通知ID（Webhook 通知接收目标）",
+    "type": "list",
+    "hint": "接收 Komari Webhook 通知的用户或群组ID列表，可以使用 /sid 命令获取"
+  },
+  "event_map": {
+    "description": "事件名称中文映射（自动替换消息中的事件名为中文）",
+    "type": "object",
+    "items": {
+      "offline": {
+        "description": "offline 事件显示名称",
+        "type": "string",
+        "default": "下线"
+      },
+      "online": {
+        "description": "online 事件显示名称",
+        "type": "string",
+        "default": "上线"
+      },
+      "alert": {
+        "description": "alert 事件显示名称",
+        "type": "string",
+        "default": "警告"
+      }
+    }
+  },
+  "webhook": {
+    "description": "Webhook 服务器设置",
+    "type": "object",
+    "items": {
+      "enabled": {
+        "description": "启用 Webhook 接收",
+        "type": "bool",
+        "default": true
+      },
+      "host": {
+        "description": "监听地址",
+        "type": "string",
+        "default": "0.0.0.0"
+      },
+      "port": {
+        "description": "监听端口",
+        "type": "int",
+        "default": 9968
+      },
+      "webhook_path": {
+        "description": "Webhook 路径",
+        "type": "string",
+        "default": "/webhook",
+        "hint": "Komari 管理后台 -> 设置 -> 通知渠道 -> Webhook -> URL 中填写此路径"
+      },
+      "token": {
+        "description": "鉴权Token（可选）",
+        "type": "string",
+        "default": "",
+        "hint": "如果配置了Token，Komari 的 Headers 中需添加 Authorization: Bearer <token>",
+        "is_password": true
+      }
+    }
+  }
+}

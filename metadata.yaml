@@ -1,0 +1,9 @@
+name: astrbot_plugin_komari_watch
+display_name: Komari 监控助手
+desc: 基于 Komari 实时状态检测的 AstrBot 插件，支持 MJPEG 状态图、节点信息查询与 Webhook 告警通知
+version: v1.0.0
+author: 星见雅
+repo: ""
+support_platforms:
+  - aiocqhttp
+  - qq_official
