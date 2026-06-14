@@ -1,4 +1,4 @@
-# astrbot_plugin_komari_watch
+# [astrbot_plugin_komari_watch](https://github.com/HSOS6/astrbot_plugin_komari_status)
 
 基于 [Komari](https://github.com/komari-monitor/komari) 服务器监控工具的 AstrBot 插件，提供实时状态查询和 Webhook 告警推送。
 
